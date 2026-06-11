@@ -1,0 +1,24 @@
+# Zależności dla eksperymentów kompresji LLM
+#
+# Instalacja (maszyna z GPU):
+#   pip install -r requirements.txt
+# Wanda i lm-evaluation-harness instalowane są przez scripts/01_setup.sh.
+
+# ── Rdzeń ──────────────────────────────────────────
+torch>=2.0.0
+transformers>=5.4.0
+accelerate
+tokenizers
+sentencepiece
+protobuf
+
+# ── Dane ───────────────────────────────────────────
+datasets
+
+# ── Destylacja wiedzy (LoRA + teacher w INT8) ──────
+peft
+bitsandbytes
+
+# ── Kwantyzacja GPTQ ───────────────────────────────
+gptqmodel
+optimum
